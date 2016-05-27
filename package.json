@@ -11,7 +11,7 @@
   "scripts": {
     "build": "node_modules/.bin/babel src -d dist",
     "checkstyle": "node_modules/.bin/jscs src",
-    "version": "checkstyle && build && git add -A ./dist",
+    "preversion": "checkstyle && build && git add -A ./dist",
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
