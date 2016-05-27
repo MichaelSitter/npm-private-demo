@@ -1,7 +1,7 @@
 {
   "name": "npm-private-demo",
   "description": "Dummy package for demonstrating private distribution.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "url": "https://github.com/MichaelSitter/npm-private-demo",
   "keywords": [
     "node"
@@ -9,11 +9,14 @@
   "author": "Michael Sitter <sitter.michael@gmail.com>",
   "main": "./dist/index.js",
   "scripts": {
-    "version": "node_modules/jscs/bin/jscs && node_modules/babel-cli/bin/babel-node && git add -A ./dist",
+    "build": "node_modules/.bin/babel src -d dist",
+    "checkstyle": "node_modules/.bin/jscs src",
+    "preversion": "npm run checkstyle && npm run build && git add -A ./dist",
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
     "jscs": "^3.0.3"
   },
   "engines": {
