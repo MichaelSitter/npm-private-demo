@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 function hasBehaviour(obj, sym) {
 	let result = {};
 	if (typeof sym === 'symbol') {

@@ -12,9 +12,6 @@
     "version": "node_modules/jscs/bin/jscs && node_modules/babel-cli/bin/babel-node && git add -A ./dist",
     "postversion": "git push && git push --tags"
   },
-  "dependencies": {
-    "lodash": "^4.13.1"
-  },
   "devDependencies": {
     "babel-cli": "^6.9.0",
     "jscs": "^3.0.3"
