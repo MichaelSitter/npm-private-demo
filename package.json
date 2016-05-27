@@ -9,8 +9,8 @@
   "author": "Michael Sitter <sitter.michael@gmail.com>",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "babel src -d lib",
-    "checkstyle": "node_modules/jscs/bin/jscs src",
+    "build": "babel src -d ./src",
+    "checkstyle": "node_modules/jscs/bin/jscs ./src",
     "version": "checkstyle && build && git add -A ./dist",
     "postversion": "git push && git push --tags"
   },
