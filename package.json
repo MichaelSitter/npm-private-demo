@@ -9,7 +9,8 @@
   "author": "Michael Sitter <sitter.michael@gmail.com>",
   "main": "./dist/index.js",
   "scripts": {
-    "version": "node_modules/jscs/bin/jscs && node_modules/babel-cli/bin/babel-node && git add -A ./dist",
+    "build": "babel src -d lib",
+    "version": "node_modules/jscs/bin/jscs && build && git add -A ./dist",
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
