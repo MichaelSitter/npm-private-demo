@@ -3,8 +3,9 @@
   "description": "Dummy package for demonstrating private distribution.",
   "version": "0.1.1",
   "url": "https://github.com/MichaelSitter/npm-private-demo",
+  "private": true,
   "keywords": [
-    "node"
+    "node", "jasmine", "testing"
   ],
   "author": "Michael Sitter <sitter.michael@gmail.com>",
   "main": "./dist/index.js",
